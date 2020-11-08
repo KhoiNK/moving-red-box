@@ -25,15 +25,15 @@ export default function App() {
         return;
       }
       const number = parseInt(value)
-      setDuration(number);
       if (number < 0) {
         setIsError(true);
         return;
       }
-      if (!Number.isInteger(number)) {
+      if (!Number.isSafeInteger(number)) {
         setIsError(true);
         return;
       }
+      setDuration(number);
       setIsError(false);
     } catch (e) { setIsError(true); }
   };
