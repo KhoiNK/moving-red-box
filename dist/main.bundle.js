@@ -11161,15 +11161,6 @@ var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 ;
 
 
-
-var MovingBox = function MovingBox(props) {
-  return /*#__PURE__*/react.createElement(Box, {
-    top: props.top,
-    left: props.left,
-    duration: props.duration
-  });
-};
-
 var Box = styled_components_browser_esm.div.withConfig({
   displayName: "box__Box",
   componentId: "nrdb8p-0"
@@ -11180,17 +11171,17 @@ var Box = styled_components_browser_esm.div.withConfig({
 }, function (props) {
   return "".concat(props.left, "px");
 });
-MovingBox.propTypes = {
+Box.propTypes = {
   top: (prop_types_default()).number,
   left: (prop_types_default()).number,
   duration: (prop_types_default()).number
 };
-MovingBox.defaultProps = {
+Box.defaultProps = {
   top: 0,
   left: 0,
   duration: 500
 };
-/* harmony default export */ const box = (/*#__PURE__*/react.memo(MovingBox));
+/* harmony default export */ const box = (/*#__PURE__*/react.memo(Box));
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__("./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);

@@ -2,8 +2,6 @@ import React from 'react'
 import styled from "styled-components"
 import PropTypes from 'prop-types'
 
-const MovingBox = (props) => (<Box top={props.top} left={props.left} duration={props.duration} />)
-
 const Box = styled.div`
   width: 50px;
   height: 50px;
@@ -14,16 +12,16 @@ const Box = styled.div`
   left: ${props => `${props.left}px`};
 `
 
-MovingBox.propTypes = {
+Box.propTypes = {
   top: PropTypes.number,
   left: PropTypes.number,
   duration: PropTypes.number,
 }
 
-MovingBox.defaultProps = {
+Box.defaultProps = {
   top: 0,
   left: 0,
   duration: 500,
 }
 
-export default React.memo(MovingBox)
+export default React.memo(Box)
