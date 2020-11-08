@@ -4,6 +4,8 @@ import MovingBox from "./components/box";
 import "./styles.css";
 
 const INPUT_WRAPPER_HEIGHT = 25
+// Since the box is (50x50), to make the box center move to the pointer postion.
+const HALF_BOX_WIDTH = 25
 
 export default function App() {
   const [coor, setCoor] = useState({ top: 0, left: 0 });
@@ -11,7 +13,7 @@ export default function App() {
   const [isError, setIsError] = useState(false);
 
   const onClick = (e) => {
-    setCoor({ top: e.clientY - (25 + INPUT_WRAPPER_HEIGHT), left: e.clientX - 25 })
+    setCoor({ top: e.clientY - (HALF_BOX_WIDTH + INPUT_WRAPPER_HEIGHT), left: e.clientX - HALF_BOX_WIDTH })
   };
 
   const onChangeDuration = (e) => {

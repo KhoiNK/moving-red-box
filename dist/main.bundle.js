@@ -11174,7 +11174,7 @@ var Box = styled_components_browser_esm.div.withConfig({
   displayName: "box__Box",
   componentId: "nrdb8p-0"
 })(["width:50px;height:50px;background:red;position:absolute;transition:", ";top:", ";left:", ";"], function (props) {
-  return "linear ".concat(props.duration !== '' ? props.duration : 500, "ms");
+  return "linear ".concat(props.duration, "ms");
 }, function (props) {
   return "".concat(props.top, "px");
 }, function (props) {
@@ -11227,7 +11227,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var INPUT_WRAPPER_HEIGHT = 25;
+var INPUT_WRAPPER_HEIGHT = 25; // Since the box is (50x50), to make the box center move to the pointer postion.
+
+var HALF_BOX_WIDTH = 25;
 function App() {
   var _useState = (0,react.useState)({
     top: 0,
@@ -11249,8 +11251,8 @@ function App() {
 
   var onClick = function onClick(e) {
     setCoor({
-      top: e.clientY - (25 + INPUT_WRAPPER_HEIGHT),
-      left: e.clientX - 25
+      top: e.clientY - (HALF_BOX_WIDTH + INPUT_WRAPPER_HEIGHT),
+      left: e.clientX - HALF_BOX_WIDTH
     });
   };
 
