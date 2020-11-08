@@ -9,7 +9,7 @@ const Box = styled.div`
   height: 50px;
   background: red;
   position: absolute;
-  transition: ${props => `linear ${props.duration !== '' ? props.duration : 500}ms`};
+  transition: ${props => `linear ${props.duration}ms`};
   top: ${props => `${props.top}px`};
   left: ${props => `${props.left}px`};
 `
